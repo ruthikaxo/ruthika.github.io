@@ -1,0 +1,14 @@
+title: Ruthika's stuff
+
+description: >- 
+  Custom page deployment specification
+baseurl: "/.well-known/did.json" # my files subpath
+url: "http://ruthikaxo.github.io" # my base hostname
+
+# exclude:
+#   - "private"
+#   - "README.md"
+#   - "temp"
+
+include:
+  - ".well-known"
