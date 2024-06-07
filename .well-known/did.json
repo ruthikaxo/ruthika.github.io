@@ -1,29 +1,48 @@
-
-
 {
-    "comments": "This is my first Decentralized Identifier Document",
-    "@context": [
-        "https://www.w3.org/ns/did/v1",
-        "https://w3id.org/security/suites/jws-2020/v1"
-    ],
     "id": "did:web:ruthikaxo.github.io",
-    "verificationMethod": [
-        {
-         "id": "did:web:ruthikaxo.github.io#owner",
-         "type": "JsonWebKey2020",
-         "controller": "did:web:ruthikaxo.github.io",
-         "publicKeyJwk": {
-            "kty": "EC",
-            "crv": "secp256k1",
-            "x": "98lziuv8tN98YGSS72HRFWoQJM8943ZOXNPP68yYezQ=",
-            "y": "eTrNHWcT+d0TQkzE8SJAhMsbgFGQSCuKCRsB2JO/KLI="
-         }
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:ruthikaxo.github.io"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://ruthikaxo.github.io/"
+          ]
         }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://hub.did.msidentity.com/v1.0/7b2a9693-80d5-4ebd-b558-5fe5f5dbdb09"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#45712e81f9574b50a5aeaa058c73c526vcSigningKey-578fc",
+        "controller": "did:web:ruthikaxo.github.io",
+        "type": "JsonWebKey2020",
+        "publicKeyJwk": {
+          "crv": "P-256",
+          "kty": "EC",
+          "x": "YAkgA_9lkUAoKkzfrwbKp8sPpn8Q1QdvSg7py-8TTF0",
+          "y": "6_7kEry-toh6I0RcxHrWxoL4OX8X4R8o5OZrHP5j_r8"
+        }
+      }
     ],
     "authentication": [
-        "did:web:ruthikaxo.github.io#owner"
+      "#45712e81f9574b50a5aeaa058c73c526vcSigningKey-578fc"
     ],
     "assertionMethod": [
-        "did:web:ruthikaxo.github.io#owner"
+      "#45712e81f9574b50a5aeaa058c73c526vcSigningKey-578fc"
     ]
-}
+  }
